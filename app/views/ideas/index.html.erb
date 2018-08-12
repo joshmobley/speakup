@@ -1,1 +1,12 @@
-<h1>ideas index</h1>
+<div class="p-8 bg-grey-light h-screen w-screen">
+
+    <div class="flex">
+        <% @ideas.each do |idea| %>
+            <div class="w-1/4 p-4 bg-white rounded border-solid border border-grey">
+                <h3><%= idea.title %></h3>
+                <p><%= idea.description %></p>
+            </div>
+        <% end %>
+    </div>
+
+</div>

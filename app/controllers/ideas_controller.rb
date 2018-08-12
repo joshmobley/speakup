@@ -6,6 +6,10 @@ class IdeasController < ApplicationController
         redirect_to @idea
     end
 
+    def index
+        @ideas = Idea.all
+    end
+
     def show
         @idea = Idea.find(params[:id])
     end
