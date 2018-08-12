@@ -1,24 +1,13 @@
-# README
+# SpeakUp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development Setup
 
-Things you may want to cover:
+```docker-compose up```
 
-* Ruby version
+This will build the images for the application
 
-* System dependencies
+Once complete run the following in another terminal window
 
-* Configuration
+```docker-compose run --rm web bundle exec rake db:create db:migrate --trace```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Navigate to [localhost](localhost:3000)
