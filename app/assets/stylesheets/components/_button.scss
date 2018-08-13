@@ -1,0 +1,21 @@
+@import 'utilities/variables';
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+
+    &--fab {
+        @extend .button;
+        align-items: center;
+        background: $purple;
+        border-radius: 9999em;
+        bottom: 2rem;
+        color: $white;
+        display: flex;
+        height: 80px;
+        justify-content: center;
+        position: fixed;
+        right: 2rem;
+        width: 80px;
+    }
+}
