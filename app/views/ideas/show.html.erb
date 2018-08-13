@@ -1,2 +1,7 @@
 <h1>title: <%= @idea.title %></h1>
 <p>description: <%= @idea.description %></p>
+
+<%= form_for :vote, url: votes_path do |form| %>
+<%= form.hidden_field :idea_id, :value => @idea.id %>
+<%= form.submit "Upvote Idea" %>
+<% end %>
