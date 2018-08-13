@@ -1,0 +1,27 @@
+@import 'utilities/variables';
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 6px;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    padding: 2rem;
+    text-decoration: none;
+    transition: all .3s;
+    width: 23%;
+
+    &:hover {
+        box-shadow: 0 2px 5px $grey;
+        transform: translate(2px, -2px);
+    }
+}

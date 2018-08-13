@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class IdeasControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+    test "should show a list of articles" do
+        articles = Ideas.index
+        
+        
+    end
 end
