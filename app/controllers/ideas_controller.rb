@@ -7,7 +7,7 @@ class IdeasController < ApplicationController
     end
 
     def index
-        @ideas = Idea.all
+        @ideas = Idea.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
     end
 
     def show
