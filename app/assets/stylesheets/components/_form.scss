@@ -1,0 +1,52 @@
+form {
+    margin: 0 auto;
+    max-width: 400px;
+
+    label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input, textarea {
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: block;
+        padding: .5rem;
+        resize: none;
+        width: 100%;
+    }
+
+    textarea {
+        height: 10em;
+        overflow: scroll;
+    }
+
+    [type="submit"] {
+        align-items: center;
+        background: $purple;
+        border-radius: 3px;
+        color: $white;
+        cursor: pointer;
+        display: flex;
+        font-size: .8rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin: 1.5rem auto;
+        padding: .75rem 1.5rem;
+        text-transform: uppercase;
+        transition: all .3s;
+        width: auto;
+
+        &:hover {
+            background: lighten($purple, 2%);
+        }
+    }
+}
+
+.form {
+    &__group {
+        + .form__group {
+            margin-top: 1rem;
+        }
+    }
+}

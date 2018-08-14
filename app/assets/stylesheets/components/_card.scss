@@ -3,7 +3,6 @@
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .card {
@@ -15,13 +14,13 @@
     flex-direction: column;
     margin-bottom: 2%;
     margin-right: 2%;
-    padding: 2rem;
+    padding: 2rem 0 1rem;
     text-decoration: none;
     transition: all .3s;
     width: 23%;
 
     &:hover {
-        box-shadow: 0 2px 5px $grey;
+        box-shadow: 0 2px 5px lighten($grey, 5%);
         transform: translate(2px, -2px);
     }
 }

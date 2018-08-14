@@ -1,7 +1,32 @@
-<h1>title: <%= @idea.title %></h1>
-<p>description: <%= @idea.description %></p>
+<div class="p-8 bg-grey-light h-screen">
 
-<%= form_for :vote, url: votes_path do |form| %>
-<%= form.hidden_field :idea_id, :value => @idea.id %>
-<%= form.submit "Upvote Idea" %>
-<% end %>
+
+    <a href="<%= root_path %>" class="flex items-center mb-4 text-sm max-w-xl m-auto">
+      <i class="material-icons">arrow_back</i>
+      Back to ideas
+    </a>
+
+    <div class="max-w-xl m-auto bg-white p-8 rounded">
+    
+        <h5>Title</h5>
+        <h1><%= @idea.title %></h1>
+
+        <h5>Pitched By</h5>
+        <div class="flex items-center">
+            <img src="//placehold.it/40x40" class="rounded-full h-8 w-8 mr-2" />
+            <p>Benjamin Longfellow</p>
+        </div>
+    
+        <h5>Description</h5>
+        <p><%= @idea.description %></p>
+    
+        <%= form_for :vote, url: votes_path do |form| %>
+            <%= form.hidden_field :idea_id, :value => @idea.id %>
+            <button type="submit">
+                <i class="material-icons mr-2">thumb_up</i> Upvote Idea
+            </button>
+        <% end %>
+
+    </div>
+
+</div>

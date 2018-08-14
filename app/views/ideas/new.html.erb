@@ -1,15 +1,24 @@
-<%= form_with scope: :idea, url: ideas_path, local: true do |form| %>
-    <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+<div class="p-8 bg-grey-light h-screen">
 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
+  <%= form_with scope: :idea, url: ideas_path, local: true do |form| %>
 
-  <p>
+    <a href="<%= root_path %>" class="flex items-center mb-8 text-sm">
+      <i class="material-icons">arrow_back</i>
+      Back to ideas
+    </a>
+    
+    <div class="form__group">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="form__group">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+    
     <%= form.submit %>
-  </p>
-<% end %>
+
+  <% end %>
+
+</div>

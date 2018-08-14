@@ -1,0 +1,15 @@
+header {
+    background: linear-gradient(15deg, $purple, $orange);
+    
+    a {
+        color: $white;
+        font-size: 1.4rem;
+        opacity: .7;
+        text-decoration: none;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: 1; 
+        }
+    }
+}

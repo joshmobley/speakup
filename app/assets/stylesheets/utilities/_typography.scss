@@ -2,3 +2,33 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 300;
 }
+
+a {
+    text-decoration: none;
+}
+
+.text-sm .material-icons {
+    font-size: .875rem;
+    margin-right: .25rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h5 {
+    color: darken($orange, 10%);
+    letter-spacing: 1px;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+* + h5 {
+    margin-top: 2rem;
+}
+
+p {
+    line-height: 1.4rem;
+    max-width: 800px;
+}
