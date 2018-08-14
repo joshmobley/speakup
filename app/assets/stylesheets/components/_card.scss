@@ -12,15 +12,46 @@
     color: $black;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2%;
-    margin-right: 2%;
+    margin-bottom: 1rem;
     padding: 2rem 0 1rem;
     text-decoration: none;
     transition: all .3s;
-    width: 23%;
+    width: 100%;
 
     &:hover {
         box-shadow: 0 2px 5px lighten($grey, 5%);
         transform: translate(2px, -2px);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        margin-bottom: 2%;
+        margin-right: 2%;
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        width: 31%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        width: 23%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .card {
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .card {
+        width: 14.667%;
     }
 }
