@@ -1,0 +1,16 @@
+language: ruby
+
+services:
+  - postgresql
+
+env:
+  global:
+    - RAILS_ENV=test
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - ./bin/rails db:create
+  - ./bin/rails db:schema:load
+
+script:
+  - bundle exec rspec
