@@ -2,6 +2,7 @@ require "rails_helper"
 
 feature "user can create ideas" do
     scenario "successfully" do
+        sign_in
         visit new_idea_path
         fill_in "idea_title", with: "My Idea Title"
         fill_in "idea_description", with: "My idea description."
