@@ -1,25 +1,21 @@
 class IdeasController < ApplicationController
+  def create
+    @idea = Idea.new(idea_params)
+    @idea.save
+    redirect_to @idea
+  end
 
-    before_action :require_login
+  def index
+    @ideas = Idea.with_votes.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
+  end
 
-    def create
-        @idea = Idea.new(idea_params)
-        @idea.save
-        redirect_to @idea
-    end
+  def show
+    @idea = Idea.find(params[:id])
+  end
 
-    def index
-        @ideas = Idea.with_votes.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
-    end
+private
 
-    def show
-        @idea = Idea.find(params[:id])
-    end
-
-    private
-
-    def idea_params
-        params.require(:idea).permit(:title, :description)
-    end
-
+  def idea_params
+    params.require(:idea).permit(:title, :description)
+  end
 end
