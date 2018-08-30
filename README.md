@@ -12,6 +12,10 @@ Once complete run the following in another terminal window
 
 Navigate to [localhost](localhost:3000)
 
+## Run Rspec tests
+
+```docker-compose run --rm web bundle exec rspec``` 
+
 ## Connect to Postgres
 
 Using your Postgres DB client of choice (Postico), you should be able to connect via the following:
