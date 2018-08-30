@@ -7,7 +7,7 @@ class IdeasController < ApplicationController
     end
 
     def index
-        @ideas = Idea.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
+        @ideas = Idea.with_votes.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
     end
 
     def show
@@ -15,9 +15,9 @@ class IdeasController < ApplicationController
     end
 
     private
-        def idea_params
-            params.require(:idea).permit(:title, :description)
-        end
 
+    def idea_params
+        params.require(:idea).permit(:title, :description)
+    end
 
 end
