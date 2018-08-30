@@ -1,5 +1,7 @@
 class IdeasController < ApplicationController
 
+    before_action :require_login
+
     def create
         @idea = Idea.new(idea_params)
         @idea.save
@@ -7,7 +9,7 @@ class IdeasController < ApplicationController
     end
 
     def index
-        @ideas = Idea.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
+        @ideas = Idea.left_joins(:votes).group(:id).order(Arel.sql('COUNT(votes.id) DESC'))
     end
 
     def show

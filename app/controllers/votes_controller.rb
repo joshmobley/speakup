@@ -1,5 +1,7 @@
 class VotesController < ApplicationController
 
+    before_action :require_login
+
     def create
         Vote.create(vote_params)
         redirect_to root_path
