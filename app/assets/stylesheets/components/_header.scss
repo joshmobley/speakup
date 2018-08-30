@@ -12,4 +12,26 @@ header {
             opacity: 1; 
         }
     }
+
+    form {
+        &.button_to {
+            display: inline;
+            margin: 0;
+            padding: 0;
+    
+            [type="submit"] {
+                background: inherit;
+                display: inline;
+                margin: 0;
+    
+                &:hover {
+                    background: inherit;
+                }
+
+                &:focus {
+                    border: inherit;
+                }
+            }
+        }
+    }
 }
