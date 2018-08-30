@@ -6,7 +6,7 @@ class IdeasController < ApplicationController
   end
 
   def index
-    @ideas = Idea.with_votes.left_joins(:votes).group(:id).order('COUNT(votes.id) DESC')
+    @ideas = Idea.with_votes.left_joins(:votes).group(:id).order(Arel.sql('COUNT(votes.id) DESC'))
   end
 
   def show
